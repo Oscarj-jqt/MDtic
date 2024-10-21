@@ -1,6 +1,7 @@
 import Mydate from "./components/Mydate";
 import Citation from "./components/Citation";
 import Blague from "./components/Blague";
+import Event from "./components/Event";
 
 // notre app
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Mydate/>
       <Citation/>
       <Blague/>
+      <Event/>
     </main>
   );
 }
