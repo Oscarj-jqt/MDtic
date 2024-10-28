@@ -15,7 +15,7 @@ function Recette() {
             // for (let i = 0; i < meals.length; i++) {
             //     const meal = data.meals[i];  
             // }
-            // Accéder à data.meals[0] pour récupérer les informations
+            // accès aux données du tableau meals
             const meal = data.meals[0];
             setRecipe({
                 name: meal.strMeal,
