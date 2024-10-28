@@ -2,9 +2,8 @@ import { React, useEffect, useState } from "react";
 
 
 function Recette() {
-
     const [recipe, setRecipe] = useState({
-        meal: null, 
+        name: null, 
         image: null, 
         instructions: null
     });
@@ -13,10 +12,15 @@ function Recette() {
         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         .then((res) => (res.json()))
         .then((data) => {
+            // for (let i = 0; i < meals.length; i++) {
+            //     const meal = data.meals[i];  
+            // }
+            // Accéder à data.meals[0] pour récupérer les informations
+            const meal = data.meals[0];
             setRecipe({
-                meal: data.meals.strMeal,
-                image: data.meals.strMealThumb,
-                instructions: data.meals.strInstructions
+                name: meal.strMeal,
+                image: meal.strMealThumb,
+                instructions: meal.strInstructions
             });
         })
         .catch((err) => console.error(err));
@@ -30,7 +34,7 @@ function Recette() {
     return (
         <div>
             <h1>Recette du jour</h1>
-            <h2>{recipe.meal}</h2>
+            <h2>{recipe.name}</h2>
             <h3>{recipe.instructions}</h3>
             <img src={recipe.image} alt={recipe.meal} />
             <button onClick={getRecipe}>Autre recette</button>
