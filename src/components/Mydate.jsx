@@ -1,7 +1,6 @@
 // Importation des modules React
 
 import { React, useEffect, useState } from "react";
-import PropTypes from 'prop-types';
 
 // Composant date
 
@@ -38,15 +37,10 @@ function Mydate() {
     
     return (
         <div>
-            <h1>Hello World</h1>
             <p>{today}</p>
             <p>{clock}</p>
         </div>
     )
   }
-
-// Date.PropTypes = {
-
-// }
 
   export default Mydate;
