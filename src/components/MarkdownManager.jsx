@@ -1,56 +1,79 @@
 import React, { useState } from 'react';
 import Showdown from 'showdown';
+import './MarkdownManager.css';
 
-// conversion Markdown to html
+// html convertion
 const converter = new Showdown.Converter();
 
-function MarkdownManager()
-{
+function MarkdownManager() {
+
   const [markdownContent, setMarkdownContent] = useState('');
+  const [fileName, setFileName] = useState('exported-file'); // default name
+
   // handling file upload
   const handleFileUpload = (event) => {
-    const file = event.target.files[0]; // getting the file selected
+    const file = event.target.files[0];
     const reader = new FileReader();
 
     reader.onload = (e) => {
       setMarkdownContent(e.target.result);
     };
-    if (file)
-      reader.readAsText(file);
+    if (file) reader.readAsText(file);
   };
 
-  // handling export case
+  // handlid file export
   const exportToMarkdown = (content, fileName) =>
-    {
+  {
     const blob = new Blob([content], { type: 'text/markdown' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
 
     a.href = url;
-    a.download = `${fileName}.md`; //
-    a.click(); // link to download the file
+    a.download = `${fileName}.md`;
+    a.click();
 
     window.URL.revokeObjectURL(url);
   };
+
   const handleFileExport = () => {
-    exportToMarkdown(markdownContent, 'exported-file'); // calling export function
+    exportToMarkdown(markdownContent, fileName || 'exported-file');
   };
 
   const previewHTML = converter.makeHtml(markdownContent);
 
   return (
-    <div>
-      <h1>markdown file </h1>
-      <input type="file" accept=".md" onChange={handleFileUpload} />
-      <textarea
-        value={markdownContent}
-        onChange={(e) => setMarkdownContent(e.target.value)}
-        rows="10"
-        cols="80"
-      />
-      <br />
-      <button onClick={handleFileExport}>Exporter en Markdown</button>
-      <div dangerouslySetInnerHTML={{ __html: previewHTML }} />
+    <div className="markdown-manager">
+      <div className="navbar">
+        <h1>Markdown Manager</h1>
+      </div>
+      <div className="content">
+        <div className="editor-section">
+          <textarea
+            value={markdownContent}
+            onChange={(e) => setMarkdownContent(e.target.value)}
+            rows="20"
+            placeholder="Écrivez votre Markdown ici..."
+          />
+        </div>
+        <div className="preview-section">
+          <h2>preview</h2>
+          <div
+            className="preview-content"
+            dangerouslySetInnerHTML={{ __html: previewHTML }}
+          />
+        </div>
+        <div className="sidebar">
+          <input type="file" accept=".md" onChange={handleFileUpload} className="file-input" />
+          <input
+            type="text"
+            placeholder="Nom du fichier"
+            value={fileName}
+            onChange={(e) => setFileName(e.target.value)}
+            className="file-name-input"
+          />
+          <button onClick={handleFileExport} className="export-button">Exporter en Markdown</button>
+        </div>
+      </div>
     </div>
   );
 }

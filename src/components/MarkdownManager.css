@@ -1,0 +1,93 @@
+.markdown-manager {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 260%;
+}
+
+.navbar {
+    background-color: #010820e4;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+.editor-section, .preview-section {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.editor-section {
+    background-color: #f5f5f5;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+.preview-section {
+    background-color: white;
+    border-left: 2px solid #ddd;
+}
+
+.preview-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    min-width: 200px;
+    background-color: #f0f0f0;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-input {
+    width: 100%;
+    padding: 8px;
+}
+
+.export-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.export-button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.file-name-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
