@@ -15,3 +15,6 @@ npm i
 ```bash
 npm run dev
 ```
+
+## Contriubuteurs
+Daniel, Dylan, Oscar, Mickaël, Kilian
