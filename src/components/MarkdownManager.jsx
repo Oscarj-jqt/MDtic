@@ -8,7 +8,7 @@ const converter = new Showdown.Converter();
 function MarkdownManager() {
 
   const [markdownContent, setMarkdownContent] = useState('');
-  const [fileName, setFileName] = useState('exported-file'); // default name
+  const [fileName, setFileName] = useState('file-name'); // default name
 
   // handling file upload
   const handleFileUpload = (event) => {
@@ -36,7 +36,7 @@ function MarkdownManager() {
   };
 
   const handleFileExport = () => {
-    exportToMarkdown(markdownContent, fileName || 'exported-file');
+    exportToMarkdown(markdownContent, fileName || 'file-name');
   };
 
   const previewHTML = converter.makeHtml(markdownContent);
