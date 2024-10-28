@@ -16,5 +16,6 @@ npm i
 npm run dev
 ```
 
-## Contriubuteurs
+
+## Contributeurs
 Daniel, Dylan, Oscar, Mickaël, Kilian
