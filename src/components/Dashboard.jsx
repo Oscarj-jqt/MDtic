@@ -2,17 +2,17 @@ import Mydate from "./Mydate";
 import Citation from "./Citation";
 import Blague from "./Blague";
 import Event from "./Event";
-import MarkdownManager from "./MarkdownManager";
+import "./Dashboard.css";
 
 // Dashboard
 function Dashboard() {
   return (
-    <main>
+    <>
       <Mydate />
       <Citation />
       <Blague />
       <Event />
-    </main>
+    </>
   );
 }
 
