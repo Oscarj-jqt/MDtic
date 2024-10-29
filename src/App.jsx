@@ -6,7 +6,6 @@ import Editor from "./components/Editor";
 function App() {
   return (
     <BrowserRouter>
-      <h1>Titre</h1>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="editor" element={<Editor />} />
