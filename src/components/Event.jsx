@@ -7,15 +7,12 @@ function Event() {
     // const [filteredEvents, setFilteredEvents] = useState([]);
 
     function eventJour() {
-        //Récupération des données de l'API
         fetch('https://history.muffinlabs.com/date')
-        // l'API nous envoie une réponse que l'on convertit en json
         .then((res) => (res.json()))
         // màj de l'event
         .then((data) => {
         // On stocke les event dans une nouvelle liste
         const eventsList = data.data.Events;
-
         // On garde 3 évènements depuis 1888
         const myEvents = eventsList.filter(event => parseInt(event.year) < 2000).slice(0,3);
         console.log(myEvents);
@@ -24,7 +21,6 @@ function Event() {
 
 
         })
-        // au cas où erreur
         .catch((err) => console.error(err));
     }
 
