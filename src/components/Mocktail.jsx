@@ -22,7 +22,6 @@ function Mocktail() {
              });
 
         })
-        // au cas où erreur
         .catch((err) => console.error(err));
     }
 
