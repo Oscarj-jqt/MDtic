@@ -1,7 +1,9 @@
 import Mydate from "./Mydate";
-import Citation from "./Citation";
-import Blague from "./Blague";
+import Quote from "./Quote";
+import Myjoke from "./myJoke";
 import Event from "./Event";
+import Myrecipe from "./Myrecipe";
+import Mocktail from "./Mocktail";
 import "./Dashboard.css";
 
 // Dashboard
@@ -9,9 +11,12 @@ function Dashboard() {
   return (
     <>
       <Mydate />
-      <Citation />
-      <Blague />
+      <Quote />
+      <Myjoke />
       <Event />
+      <Myrecipe />
+      <Mocktail />
+      
     </>
   );
 }

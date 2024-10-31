@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 
-function myJoke() {
+function Myjoke() {
     //teste de màj de la citation -> useState
     const [joke, setJoke] = useState({
         setup:null, punchline:null
@@ -34,4 +34,4 @@ function myJoke() {
     );
 }
 
-export default myJoke;
+export default Myjoke;

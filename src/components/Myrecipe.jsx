@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 
 
-function myRecipe() {
+function Myrecipe() {
     const [recipe, setRecipe] = useState({
         name: null, 
         image: null, 
@@ -45,4 +45,4 @@ function myRecipe() {
 }
 
 
-export default myRecipe;
+export default Myrecipe;
