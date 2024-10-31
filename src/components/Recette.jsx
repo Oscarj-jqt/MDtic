@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 
 
-function Recette() {
+function myRecipe() {
     const [recipe, setRecipe] = useState({
         name: null, 
         image: null, 
@@ -33,11 +33,11 @@ function Recette() {
 
     return (
         <div>
-            <h1>Recette du jour</h1>
+            <h1>Recipe of the day</h1>
             <h2>{recipe.name}</h2>
             <h3>{recipe.instructions}</h3>
             <img src={recipe.image} alt={recipe.meal} />
-            <button onClick={getRecipe}>Autre recette</button>
+            <button onClick={getRecipe}>Another recipe</button>
         </div>
     );
 
@@ -45,4 +45,4 @@ function Recette() {
 }
 
 
-export default Recette;
+export default myRecipe;
