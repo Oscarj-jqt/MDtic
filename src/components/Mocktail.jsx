@@ -33,10 +33,10 @@ function Mocktail() {
     
     return (
         <div>
-            <h1>Bar à mocktail</h1>
+            <h1>Mocktail Bar</h1>
             <h2>{mocktail.name}</h2>
             <img src={mocktail.image} alt={mocktail.name} />
-            <button onClick={getMocktail}>Autre mocktail</button>
+            <button onClick={getMocktail}>Another Mocktail</button>
         </div>
     )
 }
