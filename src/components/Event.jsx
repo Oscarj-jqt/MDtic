@@ -6,7 +6,7 @@ function Event() {
     const [events, setEvents] = useState([]);
     // const [filteredEvents, setFilteredEvents] = useState([]);
 
-    function eventJour() {
+    function dailyEvent() {
         fetch('https://history.muffinlabs.com/date')
         .then((res) => (res.json()))
         // màj de l'event
@@ -25,17 +25,17 @@ function Event() {
     }
 
     useEffect(() => {
-        eventJour();
+        dailyEvent();
     }, []);
     
     
     return (
         <div>
-            <h1>Événements historiques du jour</h1>
+            <h1>Historical events of the day</h1>
             {/* On affiche les événements avec le getter event */}
             {events.map((event, index) => (
                 <div key={index}>
-                    <h3>Année : {event.year}</h3>
+                    <h3>Year : {event.year}</h3>
                     <p>{event.text}</p>
                 </div>
             ))}
