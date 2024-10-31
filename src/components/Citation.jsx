@@ -1,12 +1,12 @@
 import { React, useEffect, useState } from "react";
 
-function Citation() {
+function Quote() {
     //teste de màj de la citation -> useState
     const [slip, setSlip] = useState({
         advice: null
     });
 
-    function citationJour() {
+    function dailyQuote() {
         //Récupération des données de l'API
         fetch('https://api.adviceslip.com/advice')
 		// l'API nous envoie une réponse que l'on convertit en json
@@ -21,8 +21,8 @@ function Citation() {
         useEffect(() => {
             //Changement de la citation toute les 24 heures
             const interval = 24 * 60 * 60 * 1000;
-            const objetInterval = setInterval(citationJour, interval)
-            citationJour();
+            const objetInterval = setInterval(dailyQuote, interval)
+            dailyQuote();
             // Annule la répétition faite par le setInterval
             // Le callback est appelé quand le composant est démonté
             return () => { clearInterval(objetInterval); }
@@ -30,11 +30,11 @@ function Citation() {
 
     return (
         <div>
-            <button onClick={citationJour}>Nouvelle citation</button>
+            <button onClick={dailyQuote}>New quote</button>
             <p>{slip.advice}</p>
         </div>
     );
 
 }
 
-export default Citation;
+export default Quote;

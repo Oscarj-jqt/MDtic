@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 
-function Blague() {
+function myJoke() {
     //teste de màj de la citation -> useState
     const [joke, setJoke] = useState({
         setup:null, punchline:null
@@ -8,7 +8,7 @@ function Blague() {
     //Etat pour afficher la réponse de la blague
     const [display, setDisplay] = useState({ punchline:null });
 
-    function blagueJour() {
+    function dailyJoke() {
         fetch('https://official-joke-api.appspot.com/random_joke')
 		.then((res) => (res.json()))
 		.then((data) =>  { setJoke({ setup: data.setup, punchline: data.punchline })
@@ -23,7 +23,7 @@ function Blague() {
 
         // Affichage d'une blague au chargement du composant
         useEffect(() => {
-            blagueJour();
+            myJoke();
       }, []);
 
     return (
@@ -34,4 +34,4 @@ function Blague() {
     );
 }
 
-export default Blague;
+export default myJoke;
