@@ -1,6 +1,6 @@
 import Mydate from "./Mydate";
 import Quote from "./Quote";
-import Myjoke from "./myJoke";
+import Myjoke from "./MyJoke";
 import Event from "./Event";
 import Myrecipe from "./Myrecipe";
 import Mocktail from "./Mocktail";
@@ -16,7 +16,6 @@ function Dashboard() {
       <Event />
       <Myrecipe />
       <Mocktail />
-      
     </>
   );
 }
