@@ -12,9 +12,6 @@ function Myrecipe() {
         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         .then((res) => (res.json()))
         .then((data) => {
-            // for (let i = 0; i < meals.length; i++) {
-            //     const meal = data.meals[i];  
-            // }
             // accès aux données du tableau meals
             const meal = data.meals[0];
             setRecipe({
