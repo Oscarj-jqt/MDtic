@@ -6,7 +6,6 @@
 body {
   font-family: "MS Sans Serif";
   display: flex;
-  height: 100vh;
   flex-direction: column;
   align-items: center;
   padding: 0;
@@ -14,6 +13,13 @@ body {
   box-shadow: inset -1px -1px 0px 0px #0a0a0a, 1px 1px 0px 0px #ffffff,
     -2px -2px 0px 0px #808080, 2px 2px 0px 0px #dfdfdf,
     1px 1px 0px 0px rgba(255, 255, 255, 1);
+}
+
+main {
+  background-color: #c0c0c0;
+  border: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 header {
@@ -52,4 +58,47 @@ main {
   box-shadow: inset -1px -1px 0px 0px #0a0a0a, 1px 1px 0px 0px #ffffff,
     -2px -2px 0px 0px #808080, 2px 2px 0px 0px #dfdfdf,
     1px 1px 0px 0px rgba(255, 255, 255, 1);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.callendar {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  background-color: #c0c0c0;
+  border: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.callendar > div {
+  margin: 0.5rem;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+}
+
+.date > img {
+  width: 24px;
+  margin-right: 5px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.time > img {
+  width: 24px;
+  margin-right: 5px;
 }

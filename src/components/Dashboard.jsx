@@ -10,9 +10,11 @@ import "./Dashboard.css";
 function Dashboard() {
   return (
     <>
-      <Mydate />
-      <Quote />
-      <Myjoke />
+      <div className="top">
+        <Mydate />
+        <Quote />
+        <Myjoke />
+      </div>
       <Event />
       <Myrecipe />
       <Mocktail />
