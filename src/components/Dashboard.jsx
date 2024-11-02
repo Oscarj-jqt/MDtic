@@ -13,8 +13,8 @@ function Dashboard() {
       <div className="top">
         <Mydate />
         <Quote />
-        <Myjoke />
       </div>
+      <Myjoke />
       <Event />
       <Myrecipe />
       <Mocktail />

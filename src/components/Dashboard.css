@@ -3,6 +3,11 @@
   src: url(../fonts/MS-Sans-Serif.ttf);
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: "MS Sans Serif";
   display: flex;
@@ -54,7 +59,6 @@ main {
   display: flex;
   margin: 1em;
   width: 98%;
-  height: 100%;
   box-shadow: inset -1px -1px 0px 0px #0a0a0a, 1px 1px 0px 0px #ffffff,
     -2px -2px 0px 0px #808080, 2px 2px 0px 0px #dfdfdf,
     1px 1px 0px 0px rgba(255, 255, 255, 1);
@@ -64,6 +68,7 @@ main {
   display: flex;
   align-items: center;
   padding: 1em;
+  border-bottom: 1px solid black;
 }
 
 .callendar {
@@ -101,4 +106,25 @@ main {
 .time > img {
   width: 24px;
   margin-right: 5px;
+}
+
+.quote {
+  text-align: center;
+  min-width: 530px;
+  max-width: 530px;
+  min-height: 110px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote > div > h2 {
+  margin: 5px;
+  margin-right: 32px;
+}
+
+.quote > div {
+  display: flex;
+  align-items: center;
 }
