@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Showdown from "showdown";
 import "./Editor.css";
+import homePage from "../assets/homepage-0.svg";
+import { Link } from "react-router-dom";
+import closeIcon from "../assets/Close.svg";
+import maximiseIcon from "../assets/Maximize.svg";
+import minimiseIcon from "../assets/Minimize.svg";
 
 // html convertion
 const converter = new Showdown.Converter();
@@ -41,8 +46,13 @@ function Editor() {
 
   return (
     <div className="markdown-manager">
-      <div className="navbar">
-        <h1>Markdown Manager</h1>
+      <div className="Editorbanner">
+        <h3>Markdown Editor</h3>
+        <div>
+          <img src={minimiseIcon} alt="" />
+          <img src={maximiseIcon} alt="" />
+          <img src={closeIcon} alt="" />
+        </div>
       </div>
       <div className="content">
         <div className="editor-section">
@@ -54,7 +64,6 @@ function Editor() {
           />
         </div>
         <div className="preview-section">
-          <h2>preview</h2>
           <div
             className="preview-content"
             dangerouslySetInnerHTML={{ __html: previewHTML }}
@@ -75,8 +84,14 @@ function Editor() {
             className="file-name-input"
           />
           <button onClick={handleFileExport} className="export-button">
-            Exporter en Markdown
+            Export markdown file
           </button>
+          <Link to="/">
+            <button className="home">
+              <img src={homePage} alt="" />
+              <h2>Back to homepage</h2>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
