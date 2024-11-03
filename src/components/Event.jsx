@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from "react";
+import wikiThumbnail from "../assets/Wikipedia-logo-v2-pixel-art.png";
 
 function Event() {
   // création du tableau events et son setteur
@@ -23,6 +24,10 @@ function Event() {
       .catch((err) => console.error(err));
   }
 
+  const openLink = (url) => {
+    window.open(url, "_blank");
+  };
+
   useEffect(() => {
     dailyEvent();
   }, []);
@@ -32,12 +37,14 @@ function Event() {
       {events.map((event, index) => (
         <li key={index} class="cards__item">
           <div class="card">
-            <img src="" alt="" />
+            <img src={wikiThumbnail} alt="" />
 
             <div class="card__content">
               <div class="card__title">Year : {event.year}</div>
               <p class="card__text">{event.text}</p>
-              <button onClick="">Another Mocktail</button>
+              <button onClick={() => openLink("https://www.google.com")}>
+                Another Mocktail
+              </button>
             </div>
           </div>
         </li>
