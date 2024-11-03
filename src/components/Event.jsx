@@ -4,7 +4,6 @@ import wikiThumbnail from "../assets/Wikipedia-logo-v2-pixel-art.png";
 function Event() {
   // création du tableau events et son setteur
   const [events, setEvents] = useState([]);
-  // const [filteredEvents, setFilteredEvents] = useState([]);
 
   function dailyEvent() {
     fetch("https://history.muffinlabs.com/date")
