@@ -17,7 +17,6 @@ function Event() {
         const myEvents = eventsList
           .filter((event) => parseInt(event.year) < 2000)
           .slice(0, 3);
-        console.log(myEvents);
         // màj des événements filtrés
         setEvents(myEvents);
       })
@@ -35,13 +34,13 @@ function Event() {
   return (
     <>
       {events.map((event, index) => (
-        <li key={index} class="cards__item">
-          <div class="card">
+        <li key={index} className="cards__item">
+          <div className="card">
             <img src={wikiThumbnail} alt="" />
 
-            <div class="card__content">
-              <div class="card__title">Year : {event.year}</div>
-              <p class="card__text">{event.text}</p>
+            <div className="card__content">
+              <div className="card__title">Year : {event.year}</div>
+              <p className="card__text">{event.text}</p>
               <button onClick={() => openLink("https://www.google.com")}>
                 View on wikipedia
               </button>

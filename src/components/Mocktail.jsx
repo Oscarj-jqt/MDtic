@@ -31,13 +31,13 @@ function Mocktail() {
   }, []);
 
   return (
-    <li class="cards__item">
-      <div class="card">
+    <li className="cards__item">
+      <div className="card">
         <img src={mocktail.image} alt={mocktail.name} />
 
-        <div class="card__content">
-          <div class="card__title">{mocktail.name}</div>
-          <p class="card__text"></p>
+        <div className="card__content">
+          <div className="card__title">{mocktail.name}</div>
+          <p className="card__text"></p>
           <button onClick={getMocktail}>Another Mocktail</button>
         </div>
       </div>

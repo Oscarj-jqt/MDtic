@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import Showdown from 'showdown';
-import './MarkdownManager.css';
+import React, { useState } from "react";
+import Showdown from "showdown";
 
 // html convertion
 const converter = new Showdown.Converter();
 
 function MarkdownManager() {
-
-  const [markdownContent, setMarkdownContent] = useState('');
-  const [fileName, setFileName] = useState('file-name'); // default name
+  const [markdownContent, setMarkdownContent] = useState("");
+  const [fileName, setFileName] = useState("file-name"); // default name
 
   // handling file upload
   const handleFileUpload = (event) => {
@@ -22,11 +20,10 @@ function MarkdownManager() {
   };
 
   // handlid file export
-  const exportToMarkdown = (content, fileName) =>
-  {
-    const blob = new Blob([content], { type: 'text/markdown' });
+  const exportToMarkdown = (content, fileName) => {
+    const blob = new Blob([content], { type: "text/markdown" });
     const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
 
     a.href = url;
     a.download = `${fileName}.md`;
@@ -36,7 +33,7 @@ function MarkdownManager() {
   };
 
   const handleFileExport = () => {
-    exportToMarkdown(markdownContent, fileName || 'file-name');
+    exportToMarkdown(markdownContent, fileName || "file-name");
   };
 
   const previewHTML = converter.makeHtml(markdownContent);
@@ -63,7 +60,12 @@ function MarkdownManager() {
           />
         </div>
         <div className="sidebar">
-          <input type="file" accept=".md" onChange={handleFileUpload} className="file-input" />
+          <input
+            type="file"
+            accept=".md"
+            onChange={handleFileUpload}
+            className="file-input"
+          />
           <input
             type="text"
             placeholder="Nom du fichier"
@@ -71,7 +73,9 @@ function MarkdownManager() {
             onChange={(e) => setFileName(e.target.value)}
             className="file-name-input"
           />
-          <button onClick={handleFileExport} className="export-button">Exporter en Markdown</button>
+          <button onClick={handleFileExport} className="export-button">
+            Exporter en Markdown
+          </button>
         </div>
       </div>
     </div>

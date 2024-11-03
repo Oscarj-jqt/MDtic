@@ -27,13 +27,13 @@ function Myrecipe() {
   }, []);
 
   return (
-    <li class="cards__item">
-      <div class="card">
+    <li className="cards__item">
+      <div className="card">
         <img src={recipe.image} alt={recipe.meal} />
 
-        <div class="card__content">
-          <div class="card__title">{recipe.name}</div>
-          <p class="card__text">{recipe.instructions}</p>
+        <div className="card__content">
+          <div className="card__title">{recipe.name}</div>
+          <p className="card__text">{recipe.instructions}</p>
           <button onClick={getRecipe}>Another recipe</button>
         </div>
       </div>
