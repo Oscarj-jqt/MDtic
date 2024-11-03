@@ -3,6 +3,15 @@
   src: url(../fonts/MS-Sans-Serif.ttf);
 }
 
+html {
+  cursor: url("../assets/cursor.cur"), auto;
+}
+
+button,
+a {
+  cursor: url("../assets/cursor-pointer.svg"), pointer;
+}
+
 #root {
   display: flex;
   flex-direction: column;
