@@ -22,10 +22,17 @@ body {
 }
 
 main {
+  display: block;
+  margin: 1em;
+  width: 98%;
+  max-width: 98%;
   background-color: #c0c0c0;
   border: 2px solid #ffffff;
   border-right: 2px solid #000000;
   border-bottom: 2px solid #000000;
+  box-shadow: inset -1px -1px 0px 0px #0a0a0a, 1px 1px 0px 0px #ffffff,
+    -2px -2px 0px 0px #808080, 2px 2px 0px 0px #dfdfdf,
+    1px 1px 0px 0px rgba(255, 255, 255, 1);
 }
 
 header {
@@ -54,15 +61,6 @@ nav > h1 {
 
 nav > span {
   margin-right: 1em;
-}
-
-main {
-  display: flex;
-  margin: 1em;
-  width: 98%;
-  box-shadow: inset -1px -1px 0px 0px #0a0a0a, 1px 1px 0px 0px #ffffff,
-    -2px -2px 0px 0px #808080, 2px 2px 0px 0px #dfdfdf,
-    1px 1px 0px 0px rgba(255, 255, 255, 1);
 }
 
 .top {
@@ -193,6 +191,7 @@ img {
 
 .cards {
   display: flex;
+  padding: 1em;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;

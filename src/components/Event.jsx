@@ -28,16 +28,21 @@ function Event() {
   }, []);
 
   return (
-    <div>
-      <h1>Historical events of the day</h1>
-      {/* On affiche les événements avec le getter event */}
+    <>
       {events.map((event, index) => (
-        <div key={index}>
-          <h3>Year : {event.year}</h3>
-          <p>{event.text}</p>
-        </div>
+        <li key={index} class="cards__item">
+          <div class="card">
+            <img src="" alt="" />
+
+            <div class="card__content">
+              <div class="card__title">Year : {event.year}</div>
+              <p class="card__text">{event.text}</p>
+              <button onClick="">Another Mocktail</button>
+            </div>
+          </div>
+        </li>
       ))}
-    </div>
+    </>
   );
 }
 
