@@ -207,6 +207,7 @@ img {
 
 .card {
   width: 250px;
+  height: 415px;
   background-color: #bfbfbf;
   padding: 10px;
   height: fit-content;
@@ -245,6 +246,18 @@ img {
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+
+  /* Ajout pour tronquer le texte */
+  white-space: nowrap; /* Afficher le texte sur une seule ligne */
+  overflow: hidden; /* Masquer le texte débordant */
+  text-overflow: ellipsis; /* Ajouter les points de suspension */
+}
+
+/* Affichage complet du texte au survol */
+.card__text:hover {
+  white-space: normal; /* Afficher le texte sur plusieurs lignes */
+  overflow: visible; /* Permettre l’affichage complet */
+  padding: 5px;
 }
 
 .card button {
