@@ -43,7 +43,7 @@ function Event() {
               <div class="card__title">Year : {event.year}</div>
               <p class="card__text">{event.text}</p>
               <button onClick={() => openLink("https://www.google.com")}>
-                Another Mocktail
+                View on wikipedia
               </button>
             </div>
           </div>

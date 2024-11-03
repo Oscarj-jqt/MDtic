@@ -158,38 +158,65 @@ nav > span {
   align-items: center;
   justify-content: center;
   row-gap: 10px;
-  padding: 1em;
+  padding: 3em;
   border: 10px solid pink;
   border-image: repeating-linear-gradient(
       -55deg,
       #000,
       #000 20px,
-      #ffb101 20px,
-      #ffb101 40px
+      #006cc0 20px,
+      #006cc0 40px
     )
     10;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+.bottom {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
 }
 
-.btn {
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  text-transform: lowercase;
+.recent-files {
+  margin-top: 15px;
+  margin-left: 55px;
+  width: 400px;
+  background-color: whitesmoke;
+  height: 800px;
+  border: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  display: flex;
+  align-items: start;
 }
 
-.btn--block {
-  display: block;
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset -1px -1px 0px 0px #0a0a0a, 1px 1px 0px 0px #0a0a0a,
+    -2px -2px 0px 0px #808080, 2px 2px 0px 0px #0a0a0a;
+  display: flex;
+  align-items: center;
   width: 100%;
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  padding: 3px 2px 3px 10px;
+  color: #ffffff;
+}
+
+.banner > h3 {
+  margin: 5px;
+}
+
+.banner > div {
+  margin-right: 5px;
+}
+
+.banner > div > img {
+  width: 32px;
 }
 
 .cards {
+  width: 60%;
   display: flex;
   padding: 1em;
   flex-wrap: wrap;
@@ -207,7 +234,7 @@ img {
 .card {
   width: 250px;
   height: 415px;
-  background-color: #bfbfbf;
+  background-color: #dddddd;
   padding: 10px;
   height: fit-content;
   box-shadow: 2px 2px 0 #7f7f7f, -2px -2px 0 #ffffff;

@@ -5,6 +5,9 @@ import Event from "./Event";
 import Myrecipe from "./Myrecipe";
 import Mocktail from "./Mocktail";
 import "./Dashboard.css";
+import closeIcon from "../assets/Close.svg";
+import maximiseIcon from "../assets/Maximize.svg";
+import minimiseIcon from "../assets/Minimize.svg";
 
 // Dashboard
 function Dashboard() {
@@ -15,12 +18,23 @@ function Dashboard() {
         <Quote />
         <Myjoke />
       </div>
-
-      <ul class="cards">
-        <Event />
-        <Myrecipe />
-        <Mocktail />
-      </ul>
+      <div className="bottom">
+        <div className="recent-files">
+          <div className="banner">
+            <h3>Welcome to MDtic</h3>
+            <div>
+              <img src={minimiseIcon} alt="" />
+              <img src={maximiseIcon} alt="" />
+              <img src={closeIcon} alt="" />
+            </div>
+          </div>
+        </div>
+        <ul class="cards">
+          <Myrecipe />
+          <Mocktail />
+          <Event />
+        </ul>
+      </div>
     </>
   );
 }
