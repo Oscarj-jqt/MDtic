@@ -13,11 +13,14 @@ function Dashboard() {
       <div className="top">
         <Mydate />
         <Quote />
+        <Myjoke />
       </div>
-      <Myjoke />
-      <Event />
-      <Myrecipe />
-      <Mocktail />
+
+      <ul class="cards">
+        <Event />
+        <Myrecipe />
+        <Mocktail />
+      </ul>
     </>
   );
 }

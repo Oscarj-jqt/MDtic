@@ -29,9 +29,9 @@ function Myjoke() {
   }, []);
 
   return (
-    <div>
-      <p>{joke.setup}</p>
-      <p>{display.punchline}</p>
+    <div className="joke">
+      <span>{joke.setup}</span>
+      {display.punchline}
     </div>
   );
 }

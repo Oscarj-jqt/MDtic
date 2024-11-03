@@ -14,15 +14,11 @@ function Mydate() {
   const month = date.getMonth() + 1;
   const day = date.getDate();
   const year = date.getFullYear();
-  const today = `Today is ${day}` + ` ` + `${month}` + ` ` + `${year}`;
-  // console.log(today);
 
   const time = date.getHours() + ":" + date.getMinutes();
   // Stockage du temps à partir de "date"
   // Gestion de l'état (useState) de la date pour la màj
   const [currenttime, setTime] = useState(time);
-  const clock = `It is ${time}`;
-  console.log(clock);
 
   // Système de màj toute les minutes (useEffect)
   useEffect(() => {
@@ -46,7 +42,7 @@ function Mydate() {
       </div>
       <div className="time">
         <img src={timeIcon} />
-        {clock}
+        Time is {time}
       </div>
     </div>
   );

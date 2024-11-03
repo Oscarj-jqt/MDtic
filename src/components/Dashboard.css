@@ -6,6 +6,7 @@
 #root {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,6 +67,7 @@ main {
 
 .top {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   padding: 1em;
   border-bottom: 1px solid black;
@@ -77,7 +79,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 250px;
+  font-size: 2em;
+  padding: 1em;
+  gap: 10px;
   background-color: #c0c0c0;
   border: 2px solid #ffffff;
   border-right: 2px solid #000000;
@@ -94,8 +98,8 @@ main {
 }
 
 .date > img {
-  width: 24px;
-  margin-right: 5px;
+  width: 48px;
+  margin-right: 10px;
 }
 
 .time {
@@ -104,27 +108,155 @@ main {
 }
 
 .time > img {
-  width: 24px;
-  margin-right: 5px;
+  width: 48px;
+  margin-right: 10px;
 }
 
 .quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  padding: 20px;
+  border: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  min-width: 430px;
+}
+
+.quote > div:first-child {
+  background-color: #eee;
+  padding: 20px;
+  box-shadow: 4px 4px 0px #999, -4px -4px 0px #fff;
+  display: flex;
+  align-items: center;
+}
+
+.quote img {
+  margin-right: 10px;
+}
+
+.quote h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.quote > div:last-child {
+  background-color: #ccc;
+  padding: 10px;
+  box-shadow: 2px 2px 0px #999, -2px -2px 0px #fff;
   text-align: center;
-  min-width: 530px;
-  max-width: 530px;
-  min-height: 110px;
-  margin: auto;
+  color: #333;
+  margin-top: 10px;
+  min-width: 397px;
+  max-width: 397px;
+}
+
+.joke {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+  padding: 1em;
+  border: 10px solid pink;
+  border-image: repeating-linear-gradient(
+      -55deg,
+      #000,
+      #000 20px,
+      #ffb101 20px,
+      #ffb101 40px
+    )
+    10;
 }
 
-.quote > div > h2 {
-  margin: 5px;
-  margin-right: 32px;
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
-.quote > div {
+.btn {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.cards {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  list-style: none;
+  display: flex;
+  padding: 1rem;
+}
+
+.card {
+  width: 250px;
+  background-color: #bfbfbf;
+  padding: 10px;
+  height: fit-content;
+  box-shadow: 2px 2px 0 #7f7f7f, -2px -2px 0 #ffffff;
+  border: 1px solid #3f3f3f;
+}
+
+.card img {
+  width: 100%;
+  border: 1px solid #3f3f3f;
+  box-shadow: 2px 2px 0 #7f7f7f, -2px -2px 0 #ffffff;
+  margin-bottom: 10px;
+}
+
+.card__content {
+  background-color: #bfbfbf;
+  padding: 10px;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #7f7f7f;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.card__title {
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  color: #333;
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.card button {
+  background-color: #bfbfbf;
+  border: 1px solid #3f3f3f;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 #7f7f7f, -1px -1px 0 #ffffff;
+}
+
+.card button:hover {
+  background-color: #cfcfcf;
 }
